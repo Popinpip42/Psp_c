@@ -26,7 +26,7 @@ int	main(void)
 			exit(2);
 		while ((bytesLeidos = read(fp, buffer, BFFR_SIZE)) >  0 ){
 			buffer[bytesLeidos] = '\0';
-			printf("%s", buffer);
+			printf("%s", buffer); //Probar a añadir un salto de línea
 			fflush(NULL);
 		}
 		close(fp);
