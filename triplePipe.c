@@ -31,7 +31,8 @@ int	main()
 		{
 			close(fd_2[1]);
 			wait(&pid_2);
-			read(fd_2[0], buffer, 100);//--
+			read(fd_2[0], buffer, 100);
+			//Create full msg (msg + buffer)
 			full_msg = malloc(strlen(msg) + strlen(buffer) * sizeof(char));
 			if (!full_msg)
 				return (1);
