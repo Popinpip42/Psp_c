@@ -42,6 +42,13 @@ int	main(int argc, char **argv)
 	
 	write(fp, saludo, strlen(saludo));
 	write(fp, "\n", 2);
+/*Flushing the Buffer: The buffer is not written to the output device until one of the following conditions is met:
+
+    The buffer becomes full. When the internal buffer is filled with characters, printf automatically flushes the buffer, sending its contents to the output device.
+
+    A newline character ('\n') is encountered in the formatted text. When printf encounters a newline character, it flushes the buffer to ensure that the text up to that point is displayed on the console immediately.
+
+    You explicitly request the buffer to be flushed. You can force the buffer to be flushed immediately by calling fflush(stdout). This is useful when you want to ensure that specific output is displayed immediately, even if the buffer is not full or there is no newline character.*/
 	close(fp);
 	free(saludo);
 	return (0);
