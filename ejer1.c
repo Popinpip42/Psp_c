@@ -8,7 +8,8 @@ int	main()
 
 	if (pid != 0)
 		fork();
+
 	printf("Hello World\n");
-	fflush(NULL);
+	fflush(stdout);
 	wait(NULL);
 }
