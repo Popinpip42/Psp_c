@@ -1,0 +1,21 @@
+Escribe un programa Java que lea dos números desde la entrada estándar 
+y visualice su suma.
+Controlar que lo introducido por teclado sean dos números. 
+Haz otro programa Java para ejecutar el anterior, 
+enviándole los datos necesarios por un stream.
+
+Calificación:
+
+-          Programa en Java suma de dos números (2 puntos).
+
+-          Validación parámetros (1 punto).
+
+-          Segundo programa para ejecutar la suma (3 puntos).
+
+-          Tratamiento de excepciones (1 punto).
+
+-          Generación Javadoc (1 punto).
+
+README.txt explicando las clases y métodos usados y cómo se ejecuta el programa (1 punto).
+
+-          Defensa (1 punto). 
