@@ -48,8 +48,3 @@ int	main(void)
 	}
 	printf("RESULT: %d\n", result);
 }
-
-int	valid_int(int num, int c)
-{
-	return (0);
-}
