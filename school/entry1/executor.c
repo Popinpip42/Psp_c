@@ -34,7 +34,7 @@ int	main(void)
 			write(fd[1], buff, strlen(buff));
 		}
 		close(fd[1]);*/
-		close(fd[0]); // Close the read end of the pipe
+		close(fd[0]);
 		char buff[129];
 		int bytes_read;
 		int newline_found = 0;

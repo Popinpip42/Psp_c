@@ -14,9 +14,11 @@ int	main(void)
 		if (pid == 0)
 		{
 			printf("myid: %d\n", getpid());
-			fflush(NULL);
+			fflush(stdout);
 			exit(0);
 		}
+		fflush(stdout);
+		fflush(stdin);
 	}
 	return (0);
 }

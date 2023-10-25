@@ -7,7 +7,7 @@
 int	main(void)
 {
 	int	fd[2];
-	int	bfr_size = 192;
+	int	bfr_size = 1024;
 	int	bytes_r;
 	pid_t	pid;
 
@@ -24,13 +24,16 @@ int	main(void)
 				if (strlen(response) != 0)
 				{
 					printf("Response recieved-> %s\n", response);
-					fflush(stdout);
+					fflush(stdin);//Error....
+					fflush(stdout);//Error...
 				}
 			}
 		}
 		close(fd[0]);
 
-	}else{
+	}
+	else
+	{
 		close(fd[0]);
 		char	command[bfr_size];
 		int	written = 0;
@@ -39,7 +42,6 @@ int	main(void)
 		{
 			while ((bytes_r = read(STDIN_FILENO, command, bfr_size)) > 0)
 			{
-				command[bytes_r] = '\0';
 				if (written = write(fd[1], command, strlen(command)))
 				{
 					perror("write");
@@ -50,5 +52,4 @@ int	main(void)
 		close(fd[1]);
 		wait(&pid);
 	}
-	
 }
