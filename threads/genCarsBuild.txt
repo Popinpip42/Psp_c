@@ -1,0 +1,2 @@
+gcc -o genCar genCars.c -L. -I. -lft
+
